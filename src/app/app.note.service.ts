@@ -15,9 +15,19 @@ export class NoteService {
     return this._notes;
   }
 
-  sortNotes(type: string)
+  sortNotes(type: string) : Note[]
   {
-     this._notes.sort((a,b) => {return a.date > b.date ? -1 : 1})
+    return this._notes.sort((a,b) => 
+    {
+      if (type == 'ascending')
+      {
+         return a.date > b.date ? -1 : 1
+      }
+      else
+      {
+        return a.date > b.date ? 1 : -1
+      } 
+    })
   }
 
 

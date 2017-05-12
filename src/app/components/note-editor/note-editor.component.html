@@ -1,3 +1,4 @@
 <div class="node-editor-wrap">
-  <textarea [(ngModel)]="_currentNote.body" placeholder="Type note here..."></textarea>
+  <textarea class="edit-title" [(ngModel)]="_currentNote.title" maxlength="50" placeholder="Type title here..."></textarea>
+  <textarea  class="edit-body" [(ngModel)]="_currentNote.body" placeholder="Type note here..."></textarea>
 </div>
