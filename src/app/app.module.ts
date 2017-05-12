@@ -6,13 +6,15 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NotePreviewComponent } from './components/note-preview/note-preview.component';
 import { NoteEditorComponent } from './components/note-editor/note-editor.component';
+import { ActionBarComponent } from './components/action-bar/action-bar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NotePreviewComponent,
-    NoteEditorComponent
+    NoteEditorComponent,
+    ActionBarComponent
   ],
   imports: [
     BrowserModule,

@@ -24,4 +24,10 @@ export class AppComponent {
   {
     this._currentNote = newSelectedNote;
   }
+  
+  addNewNote()
+  {
+    this.noteService.addNote();
+    this._currentNote = this._notes[0];
+  }
 }

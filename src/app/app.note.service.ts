@@ -15,6 +15,18 @@ export class NoteService {
     return this._notes;
   }
 
+  addNote(){
+    let newNote = new Note(
+      "New title", 
+      "New body",
+      Math.floor(Math.random()*(999-100+1)+100),
+      new Date()
+    )
+
+    this._notes.push(newNote);
+    this.sortNotes('ascending');
+  }
+
   sortNotes(type: string) : Note[]
   {
     return this._notes.sort((a,b) => 

@@ -1,5 +1,6 @@
 <div class="app-wrap">
   <div class="note-selector-wrap">
+    <app-action-bar (onAddNote)="addNewNote($event)"></app-action-bar>
     <div class="note-selector" *ngFor = "let note of _notes">
       <app-note-preview [_note]="note" [_isSelected]="(_currentNote.id == note.id)" (onNoteSelected)="getNoteSelected($event)"></app-note-preview>
     </div>
