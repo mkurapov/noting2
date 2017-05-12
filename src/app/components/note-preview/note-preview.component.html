@@ -1,4 +1,4 @@
-<div class="note-preview" (click)="noteSelected(_note)">
+<div class="note-preview" (click)="noteSelected(_note)" [class.selected]="_isSelected">
   <span class="title">{{_note.title}}</span>
   <span class="date">{{_note.date | date}}</span>
   <span class="body">{{_note.body}}</span>

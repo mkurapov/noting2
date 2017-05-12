@@ -9,11 +9,12 @@ import { Note } from '../../interfaces/Note';
 export class NotePreviewComponent implements OnInit {
 
   @Input() _note: Note;
+  @Input() _isSelected: boolean = false;
   @Output() onNoteSelected: EventEmitter<any> = new EventEmitter();
 
-  private isSelected : boolean = false;
 
   ngOnInit() {
+    console.log(this._isSelected)
   }
 
   noteSelected(note: Note)

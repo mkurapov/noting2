@@ -1,14 +1,42 @@
+@import "variables";
+
 .note-preview
 {
-    height:50px;
+    display: flex;
+    flex-direction: column;
+    height:80px;
     padding: 30px 20px;
     font-family: Arial, Helvetica, sans-serif;
-    border-bottom: 1px solid purple;
+    border-bottom: 1px solid $project-color-selector;
+    cursor: pointer;
+    position: relative;
+
+    &.selected
+    {
+        background-color:  $project-color-selector;
+    }
 
     .title
     {
         width: 100%;
         display: inline-block;
         font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .body
+    {
+        width: 50%;
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: grey;
+       margin-top:auto;
+       flex-grow: 0;
+    }
+
+    .date
+    {
+
     }
 }
