@@ -1,3 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+<div class="app-wrap">
+  <div class="note-selector-wrap">
+    <div class="note-selector" *ngFor = "let note of _notes">
+      <app-note-preview [_note]="note" (onNoteSelected)="getNoteSelected($event)"></app-note-preview>
+    </div>
+  </div>
+  <app-note-editor [_currentNote] = "_currentNote"></app-note-editor>
+</div>

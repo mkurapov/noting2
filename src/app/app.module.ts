@@ -4,10 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { NotePreviewComponent } from './components/note-preview/note-preview.component';
+import { NoteEditorComponent } from './components/note-editor/note-editor.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotePreviewComponent,
+    NoteEditorComponent
   ],
   imports: [
     BrowserModule,
