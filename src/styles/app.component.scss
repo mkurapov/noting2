@@ -4,7 +4,20 @@
 {
     width:$side-bar-width;
     position: fixed;
-    height:100vh;
+    overflow-y: scroll;
     background-color: $project-color-main;
     display: block;
+    top:$action-bar-height;
+    bottom:0;
+
+   
 }
+
+ ::-webkit-scrollbar {
+        width: 5px;  /* remove scrollbar space */
+        //background: transparent;  /* optional: just make scrollbar invisible */
+    }
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.2);
+    }
